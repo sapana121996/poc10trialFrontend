@@ -1,0 +1,64 @@
+<!-- 
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+         <div *ngIf=" status == 'ON' ; else elseBlock" > 
+            <div>
+              <h1>current energy consumption : {{temp1}}</h1> 
+              <h1>button Status :{{status}}</h1>
+            </div> 
+         </div>
+           <ng-template #elseBlock>  
+           <h1>previous energy consumption : {{temp1}}</h1>
+           <h1>button Status :{{status}}</h1>
+          </ng-template>   
+        <div>
+        <section class="button">
+        <section>
+            <button name="start" (click)="startButton()" type="button" class="btn btn-primary"> Start</button>
+            
+        </section>
+        <section class="secondButton">
+            <button name="stop" (click)="stopButton()" type="button" class="btn btn-primary">Stop </button>
+        </section>
+    </section>
+     </div>
+    
+    </div>
+</div> -->
+
+
+  <!-- <div [chart]="chart"></div> -->
+
+   <div *ngIf=" status == 'ON' ; else elseBlock" > 
+        <section class="symbol" style="padding-left: 1000px;">
+           <section class="status">
+              <span   style="margin-right: 130px;float: right; margin-top: 30px; font-size: 20px;font-weight: bold;">Status</span> 
+                <i class="material-icons glyphicon glyphicon-stop" style="color: darkgreen;font-size: 50px;margin-top: 20px; ">stop</i>
+           </section>
+         </section>
+         <div [chart]="chart"></div>
+   </div>
+   <ng-template #elseBlock>  
+     <section class="symbol" style="padding-left: 1000px;">
+      <section class="status">
+        <span   style="margin-right: 130px;float: right; margin-top: 30px; font-size: 20px;font-weight: bold;">Status</span> 
+        <i class="material-icons glyphicon glyphicon-stop" style="color: darkred;font-size: 50px;margin-top: 20px; ">stop</i>
+      </section>
+    </section>
+   <div [chart]="chart"></div>
+  </ng-template>   
+<div> 
+
+
+  <section class="button">
+    <section>
+       <button name="start" (click)="startButton()" type="button" class="btn btn-primary"> Start</button>
+    </section>
+    <section class="secondButton">
+        <button name="stop" (click)="stopButton()" type="button" class="btn btn-primary">Stop </button>
+    </section>
+</section>
+
+
+

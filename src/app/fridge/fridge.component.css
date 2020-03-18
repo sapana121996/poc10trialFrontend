@@ -1,0 +1,26 @@
+
+.button{
+    display: flex;
+    flex-direction: row;
+    
+}
+.secondButton{
+    padding-left: 20px;
+}
+
+.data{
+    padding-right: 900px;
+}
+#status {
+    position:absolute;
+    top:0;
+    right:0;
+}
+.symbol{
+  display: flex;
+  flex-direction: row;
+  padding-block-start: 10px;
+} 
+.status{
+    padding-left: 5px;
+}
